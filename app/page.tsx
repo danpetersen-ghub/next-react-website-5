@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 
 export default async function Home() {
 
-  const data = await fetch('http://localhost:3000/api/data/rsvp').then((res) => res.json());
+  const data = await fetch('http://localhost:5000/api/data/rsvp').then((res) => res.json());
 
   console.log("string is:", data);
 
