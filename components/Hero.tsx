@@ -10,7 +10,7 @@ const HeroBanner = (props: { name: string }) => {
                     <div className="text-center">
                         <h1 className="text-white text-6xl font-bold leading-tight mb-6">Welcome to {pageName} Page</h1>
                         <p className="text-xl text-gray-300 mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor nisi eget ante sollicitudin, id hendrerit dui venenatis.</p>
-                        <a href="#" className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">Learn More</a>
+                        <a href="#" className="bg-gray-800 hover:bg-gray-500 text-gray-100 font-semibold py-2 px-4 border  rounded shadow">Learn More</a>
                     </div>
                 </div>
             </div>
