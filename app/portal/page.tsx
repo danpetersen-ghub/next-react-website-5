@@ -2,8 +2,8 @@ import Navbar from "@/components/Navbar";
 import HeroBanner from "@/components/Hero";
 import BodyCopy from "@/components/BodyCopy";
 import Footer from "@/components/Footer";
-import CreateAccount from "@/components/CreateAccount";
-import SignIn from "@/components/SignIn";
+import CreateAccount from "@/components/portal/CreateAccount";
+import SignIn from "@/components/portal/SignIn";
 
 export default function About() {
     return (

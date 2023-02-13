@@ -1,35 +1,28 @@
 "use client"
-
 import React, { useState } from "react";
-import firebase from "firebase/app";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-// import firebaseConfig  from "utils/firebaseConfig"
 
-const CreateAccount = () => {
-
+const SignIn = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState<Error | null>(null);
 
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-
-        const auth = getAuth();
         event.preventDefault();
-        try {
-            await createUserWithEmailAndPassword(auth, email, password)
-                .then((userCredential) => {
-                    // Signed in 
-                    const user = userCredential.user;
-                    // ...
-                })
-                .catch((error) => {
-                    const errorCode = error.code;
-                    const errorMessage = error.message;
-                    // ..
-                });
-        } catch (error) {
-            setError(error as Error);
-        }
+        // try {
+        //     await signInWithEmailAndPassword(auth, email, password)
+        //         .then((userCredential) => {
+        //             // Signed in 
+        //             const user = userCredential.user;
+        //             // ...
+        //         })
+        //         .catch((error) => {
+        //             const errorCode = error.code;
+        //             const errorMessage = error.message;
+        //             // ...
+        //         });
+        // } catch (error) {
+        //     setError(error as Error);
+        // }
     };
 
     return (
@@ -49,17 +42,16 @@ const CreateAccount = () => {
                 placeholder="Password"
             />
             <button
-                className="block bg-gray-800 hover:bg-gray-500 mt-4 p-2 rounded text-white w-full"
+                className="block bg-gray-800 hover:bg-blue-700 mt-4 p-2 rounded text-white w-full"
                 type="submit"
             >
-                Create Account
+                Sign In
             </button>
             {error && (
                 <p className="block mt-4 text-red-500">{error.message}</p>
             )}
         </form>
-
     );
 };
 
-export default CreateAccount;
+export default SignIn;
